@@ -1,9 +1,9 @@
 FROM openjdk:18-jdk-oraclelinux8
 FROM maven:3.8.6
 
-#WORKDIR ./
+WORKDIR ./
 
-#COPY ../.. .
+COPY ./ ./
 
 RUN mvn clean install -DskipTests
 
