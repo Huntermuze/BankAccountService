@@ -33,7 +33,8 @@ public class BankAccountController {
                 .toUri();
         return ResponseEntity.created(loc).build();
     }
-    // TODO test both microservices using postman (and prepare tests for video).
+    // DONE test both microservices using postman (and prepare tests for video).
+
     // TODO Add 3 unit tests per controller.
     // TODO Add dockerfile for each service and the database. Talk about how you know how to implement database on github
     //  actions container, but cannot do so due to splitting repos in two. So there would be two local databases. Do the latter
