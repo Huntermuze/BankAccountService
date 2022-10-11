@@ -1,4 +1,4 @@
-FROM maven:3.6.3-jdk-18-openj9
+FROM openjdk:18-jdk-oraclelinux8
 
 WORKDIR ./
 
