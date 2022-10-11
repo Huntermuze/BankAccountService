@@ -28,9 +28,5 @@ jobs:
       image: mysql
     steps:
     - uses: actions/checkout@v3
-    - name: Build the mysql and service stack
+    - name: Build the mysql and service stack, and run them
       run: docker-compose up -d
-    - name: Run mysqldb
-      run: docker run mysqldb
-    - name: Run microservice
-      run: docker run app
