@@ -6,26 +6,26 @@ name: Java CI with Maven
 on:
   push:
     branches:
-    - "master"
-    - "dev"
-    - "controller_feature"
-    - "custom_exceptions_feature"
-    - "dto_and_entity_feature"
-    - "service_feature"
+      - "master"
+      - "dev"
+      - "controller_feature"
+      - "custom_exceptions_feature"
+      - "dto_and_entity_feature"
+      - "service_feature"
   pull_request:
     branches:
-    - "master"
-    - "dev"
-    - "controller_feature"
-    - "custom_exceptions_feature"
-    - "dto_and_entity_feature"
-    - "service_feature"
+      - "master"
+      - "dev"
+      - "controller_feature"
+      - "custom_exceptions_feature"
+      - "dto_and_entity_feature"
+      - "service_feature"
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    services:
+      image: mysql
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 18
