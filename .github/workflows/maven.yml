@@ -5,9 +5,21 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "master", "dev", "controller_feature", "custom_exceptions_feature", "dto_and_entity_feature", "service_feature" ]
+    branches:
+    - "master"
+    - "dev"
+    - "controller_feature"
+    - "custom_exceptions_feature"
+    - "dto_and_entity_feature"
+    - "service_feature"
   pull_request:
-    branches: [ "master", "dev", "controller_feature", "custom_exceptions_feature", "dto_and_entity_feature", "service_feature" ]
+    branches:
+    - "master"
+    - "dev"
+    - "controller_feature"
+    - "custom_exceptions_feature"
+    - "dto_and_entity_feature"
+    - "service_feature"
 
 jobs:
   build:
