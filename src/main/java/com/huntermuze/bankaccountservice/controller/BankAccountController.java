@@ -33,15 +33,6 @@ public class BankAccountController {
                 .toUri();
         return ResponseEntity.created(loc).build();
     }
-    // DONE test both microservices using postman (and prepare tests for video).
-    // DONE Add 3 unit tests per controller.
-
-    // TODO Add dockerfile for each service and the database. Talk about how you know how to implement database on github
-    //  actions container, but cannot do so due to splitting repos in two. So there would be two local databases. Do the latter
-    //  anyway, but mention that there are two dbs going on when run on github. But if running locally on your machine, there
-    //  will be one and if deployed there will also only be one.
-    //  Add homy1 prakash and all other staff to both repos.
-    // TODO CONSIDER adding date to DTOs for this microservice, as may lose marks. Using @JsonIgnore annotation.
 
     @PutMapping(consumes = "application/json")
     public ResponseEntity<Object> updateBankAccount(@RequestBody BankAccount bankAccount) {
