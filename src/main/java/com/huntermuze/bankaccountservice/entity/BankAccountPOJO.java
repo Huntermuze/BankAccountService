@@ -2,20 +2,19 @@ package com.huntermuze.bankaccountservice.entity;
 
 import com.huntermuze.bankaccountservice.dto.AccountType;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity(name = "BankAccount")
 @Table(name = "BankAccount")
+@EntityListeners(AuditingEntityListener.class)
 public class BankAccountPOJO {
     @Id
     private String accountNumber;
     @Column(name = "user_id", nullable = false, unique = true)
-    private String userID;
+    private long userID;
     @Column(name = "account_type", nullable = false)
     private AccountType accountType;
     @Column(name = "account_name", nullable = false)
@@ -24,9 +23,9 @@ public class BankAccountPOJO {
     private double balance;
     @Column(name = "date", nullable = false)
     @CreatedDate
-    private Date date;
+    private Date date = new Date();
 
-    public BankAccountPOJO(String accountNumber, String userID, AccountType accountType, String accountName, double balance) {
+    public BankAccountPOJO(String accountNumber, long userID, AccountType accountType, String accountName, double balance) {
         this.accountNumber = accountNumber;
         this.userID = userID;
         this.accountType = accountType;
@@ -46,11 +45,11 @@ public class BankAccountPOJO {
         this.accountNumber = accountNumber;
     }
 
-    public String getUserID() {
+    public long getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(long userID) {
         this.userID = userID;
     }
 

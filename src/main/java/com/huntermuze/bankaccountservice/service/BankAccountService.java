@@ -12,9 +12,9 @@ public interface BankAccountService {
 
     BankAccount getBankAccount(String id) throws NotFoundException;
 
-    void addBankAccount(BankAccount bankAccount) throws AlreadyExistException;
+    void addBankAccount(BankAccount bankAccount) throws NotFoundException, AlreadyExistException;
 
-    void updateBankAccount(BankAccount bankAccount) throws NotFoundException;
+    void updateBankAccount(BankAccount bankAccount) throws NotFoundException, NotFoundException;
 
     void deleteBankAccount(String id) throws NotFoundException;
 }

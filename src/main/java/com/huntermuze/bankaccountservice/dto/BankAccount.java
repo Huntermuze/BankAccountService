@@ -4,12 +4,12 @@ import java.util.Date;
 
 public class BankAccount {
     private String accountNumber;
-    private String userID;
+    private long userID;
     private AccountType accountType;
     private String accountName;
     private double balance;
 
-    public BankAccount(String accountNumber, String userID, AccountType accountType, String accountName, double balance) {
+    public BankAccount(String accountNumber, long userID, AccountType accountType, String accountName, double balance) {
         this.accountNumber = accountNumber;
         this.userID = userID;
         this.accountType = accountType;
@@ -29,11 +29,11 @@ public class BankAccount {
         this.accountNumber = accountNumber;
     }
 
-    public String getUserID() {
+    public long getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(long userID) {
         this.userID = userID;
     }
 
