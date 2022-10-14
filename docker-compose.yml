@@ -20,7 +20,9 @@ services:
   app:
     depends_on:
       - mysqldb
-    build: ./docker/service
+    build:
+      context: ./
+      dockerfile: ./docker/service
     restart: on-failure
     env_file: ./.env
     ports:
